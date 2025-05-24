@@ -1,0 +1,98 @@
+### **User Manual for Auction System Prototype**
+
+This user manual provides instructions on how to use the auction system prototype with menu-based functionality. The system allows you to manage services, place bids, and run the auction to determine winning allocations and prices.
+
+#### **System Requirements**
+- Python 3.x installed
+- SQLite3 (comes pre-installed with Python)
+- Basic understanding of how to run Python scripts from the command line
+
+#### **Installation Instructions**
+1. **Clone or Download the Code**: Ensure you have the Python script (`auction_system.py`) containing the provided code on your local machine.
+2. **Set Up the Environment**:
+   - Ensure Python 3 is installed on your system. You can check by running:
+     ```bash
+     python3 --version
+     ```
+   - Install any additional dependencies if required. In this basic setup, no external packages are needed.
+
+3. **Run the Script**:
+   - Open a terminal or command prompt.
+   - Navigate to the directory containing the script.
+   - Execute the script using:
+     ```bash
+     python3 auction_system.py
+     ```
+
+#### **Main Menu Options**
+
+Upon running the script, the system displays a main menu with options for interacting with the auction system.
+
+1. **Add a Service**:
+   - **Purpose**: Add a new service offered by providers to the auction system.
+   - **Steps**:
+     - Choose option `1`.
+     - Enter the service name (e.g., "Hotel Stay").
+     - Enter the available quantity (e.g., `5`).
+     - Enter the base price (e.g., `100`).
+   - **Outcome**: The service is added to the system with the given details.
+
+2. **Add a Bid**:
+   - **Purpose**: Add a new bid from a customer, specifying the bundle of services they are interested in.
+   - **Steps**:
+     - Choose option `2`.
+     - Enter the customer's name (e.g., "Alice").
+     - Enter the bid price (e.g., `150`).
+     - View available services, and enter the service IDs that form the bundle (e.g., `1,2` for selecting the first and second services).
+   - **Outcome**: The bid is recorded in the system.
+
+3. **View Services**:
+   - **Purpose**: View all available services with their details.
+   - **Steps**:
+     - Choose option `3`.
+   - **Outcome**: Displays a list of all current services, their quantities, base prices, and current prices.
+
+4. **View Bids**:
+   - **Purpose**: View all current bids placed by customers.
+   - **Steps**:
+     - Choose option `4`.
+   - **Outcome**: Displays a list of all bids, including customer names, bid amounts, and service bundles.
+
+5. **Run Auction**:
+   - **Purpose**: Execute the combinatorial auction logic to determine the best allocation of bids, resolve conflicts, and update prices.
+   - **Steps**:
+     - Choose option `5`.
+   - **Outcome**: 
+     - Displays the winning allocations with the final prices each winning customer needs to pay for their bundle.
+     - Shows the maximized social welfare resulting from the best allocation.
+
+6. **Exit**:
+   - **Purpose**: Exit the system safely.
+   - **Steps**:
+     - Choose option `6`.
+   - **Outcome**: Ends the script.
+
+#### **Using the Auction System**
+1. **Starting Up**:
+   - Run the script, and you will be greeted with the main menu. From here, you can manage services, place bids, and execute the auction.
+
+2. **Workflow Example**:
+   - Add multiple services (e.g., hotels, restaurants).
+   - Place bids from different customers specifying their desired bundles.
+   - View services and bids to ensure correctness.
+   - Run the auction to see the outcome and how prices adjust based on demand.
+
+3. **Tips**:
+   - Ensure services are correctly added with enough quantity to allow meaningful bidding.
+   - Enter bundles accurately as per the service IDs shown in the system.
+   - Check updated prices after running the auction to see how demand affects service costs.
+
+#### **Troubleshooting**
+- **Database Not Found Error**: If the database (`auction.db`) is missing, the system should create it automatically when you first run the script. If issues persist, ensure permissions allow file creation in the directory.
+- **Incorrect Input Errors**: Ensure that you enter numeric inputs where expected (e.g., quantity, prices) and follow on-screen prompts.
+- **No Bids or Services Displayed**: Make sure you have added services and bids before attempting to view or run the auction.
+
+#### **Further Enhancements**
+- This prototype is designed for basic functionality. Future improvements could include a graphical user interface (GUI), integration with a web-based front end, or more sophisticated auction mechanisms.
+
+This manual provides the basics to get you started with the auction system prototype, enabling you to experiment with combinatorial auctions in a simplified but functional environment.
